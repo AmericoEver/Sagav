@@ -1,0 +1,453 @@
+// SAGAV - Mock Database & Niche Catalog
+
+export const NICHES = [
+  "Desenvolvimento Frontend",
+  "Desenvolvimento Backend",
+  "Full Stack & Mobile",
+  "TI, Redes & Infraestrutura",
+  "UI/UX & Product Design",
+  "Data Science & IA",
+  "Cibersegurança",
+  "Gestão de Projetos & Scrum",
+  "Telecomunicações & Suporte"
+];
+
+export const INITIAL_USER_PROFILE = {
+  name: "António Mabunda",
+  email: "antonio.mabunda@dev.mz",
+  phone: "+258 84 123 4567",
+  location: "Maputo, Moçambique",
+  country: "Moçambique",
+  countryCode: "MZ",
+  flag: "🇲🇿",
+  region: "Maputo",
+  locationScope: "country", // 'country', 'region', 'global'
+  portfolio: "https://linkedin.com/in/antonio-mabunda",
+  headline: "Desenvolvedor de Software & Especialista em Soluções Digitais",
+  targetNiche: "Desenvolvimento Frontend",
+  seniority: "Pleno",
+  summary: "Profissional de Tecnologia e Desenvolvimento de Software em Moçambique com vasta experiência na criação de interfaces modernas, sistemas corporativos e integração de APIs. Focado em resolver problemas de conectividade, performance e usabilidade com padrões internacionais.",
+  skills: [
+    "React",
+    "JavaScript / TypeScript",
+    "HTML5 / CSS3 Moderno",
+    "Node.js",
+    "SQL / PostgreSQL",
+    "REST APIs",
+    "Git / GitHub",
+    "Suporte & Redes TI",
+    "Figma"
+  ],
+  experiences: [
+    {
+      company: "Tech Solutions Moçambique",
+      role: "Desenvolvedor Frontend & Web",
+      period: "2023 - Presente",
+      description: "Desenvolvimento de portais institucionais e sistemas de faturação online para empresas locais em Maputo, reduzindo tempos de resposta e melhorando a experiência em redes móveis."
+    },
+    {
+      company: "Inovação Digital Maputo",
+      role: "Assistente de TI & Programador",
+      period: "2021 - 2023",
+      description: "Manutenção de infraestrutura de rede e suporte técnico aos sistemas internos de gestão financeira e logística."
+    }
+  ],
+  education: [
+    {
+      school: "Universidade Eduardo Mondlane (UEM)",
+      degree: "Licenciatura em Engenharia Informática",
+      period: "2018 - 2022"
+    }
+  ],
+  geminiApiKey: ""
+};
+
+export const INITIAL_JOBS = [
+  // --- VAGAS DE MOÇAMBIQUE (CBE, LinkedIn MZ, Emprego.co.mz, Comunidades) ---
+  {
+    id: "job-mz-1",
+    title: "Desenvolvedor Frontend React & Web",
+    company: "Standard Bank Moçambique",
+    companyBadge: "SBM",
+    logoColor: "linear-gradient(135deg, #0033aa 0%, #0066ff 100%)",
+    niche: "Desenvolvimento Frontend",
+    level: "Pleno / Sênior",
+    location: "Maputo (Polana / Híbrido)",
+    country: "Moçambique",
+    countryCode: "MZ",
+    flag: "🇲🇿",
+    region: "Maputo",
+    type: "Híbrido",
+    salary: "140.000 MT - 195.000 MT /mês",
+    source: "LinkedIn Moçambique",
+    sourceType: "linkedin",
+    postedDate: "Há 40 minutos",
+    applyUrl: "https://www.linkedin.com/jobs/standard-bank-mz",
+    mapCoords: { x: 145, y: 345, city: "Maputo" },
+    matchScore: 98,
+    skills: ["React", "TypeScript", "HTML5/CSS3", "REST APIs", "Git", "Design System"],
+    description: "O Standard Bank Moçambique está a recrutar um(a) Desenvolvedor(a) Frontend para integrar a equipa de Canais Digitais e Mobile Banking em Maputo. O profissional será responsável pela modernização das interfaces de internet banking.",
+    responsibilities: [
+      "Construir componentes visuais fluidos e responsivos para o portal bancário.",
+      "Garantir conformidade com os padrões de segurança e criptografia bancária.",
+      "Colaborar com designers de UX/UI e analistas de negócio em squads ágeis."
+    ],
+    requirements: [
+      "3+ anos de experiência comprovada com React e TypeScript.",
+      "Conhecimento de boas práticas de consumo de APIs e testes unitários.",
+      "Residência em Maputo ou Matola."
+    ],
+    benefits: ["Seguro de Saúde Familiar Médis", "Subsídio de Transporte e Alimentação", "Bónus Anual Bancário"]
+  },
+  {
+    id: "job-mz-2",
+    title: "Especialista de Sistemas & Redes TI",
+    company: "Vodacom Moçambique",
+    companyBadge: "VOD",
+    logoColor: "linear-gradient(135deg, #e60000 0%, #990000 100%)",
+    niche: "TI, Redes & Infraestrutura",
+    level: "Pleno",
+    location: "Maputo (Edifício Vodacom)",
+    country: "Moçambique",
+    countryCode: "MZ",
+    flag: "🇲🇿",
+    region: "Maputo",
+    type: "Presencial",
+    salary: "125.000 MT - 170.000 MT /mês",
+    source: "CBE Moçambique (cbe.co.mz)",
+    sourceType: "cbe",
+    postedDate: "Hoje",
+    applyUrl: "https://cbe.co.mz/vagas/vodacom-ti-sistemas",
+    mapCoords: { x: 152, y: 348, city: "Maputo" },
+    matchScore: 94,
+    skills: ["Linux", "Redes Cisco", "Cloud", "Suporte TI", "Segurança da Informação"],
+    description: "Vaga divulgada via consultoria CBE Emprego Moçambique para a Vodacom. O especialista irá suportar as plataformas centrais do M-Pesa e serviços de valor acrescentado.",
+    responsibilities: [
+      "Monitorar a disponibilidade dos servidores e serviços de telecomunicação.",
+      "Implementar rotinas de backup e planos de contingência de desastres.",
+      "Atender chamados técnicos de nível 2 e 3."
+    ],
+    requirements: [
+      "Licenciatura em Engenharia Informática, Telecomunicações ou similar.",
+      "Certificações CCNA ou Red Hat são consideradas uma vantagem."
+    ],
+    benefits: ["Plano médico corporativo", "Aparelho e plafond de dados ilimitado", "Previdência privada"]
+  },
+  {
+    id: "job-mz-3",
+    title: "Engenheiro de Software Full Stack (Node.js & React)",
+    company: "Millennium bim",
+    companyBadge: "BIM",
+    logoColor: "linear-gradient(135deg, #cc0033 0%, #66001a 100%)",
+    niche: "Full Stack & Mobile",
+    level: "Sênior",
+    location: "Maputo / Matola",
+    country: "Moçambique",
+    countryCode: "MZ",
+    flag: "🇲🇿",
+    region: "Maputo",
+    type: "Híbrido",
+    salary: "150.000 MT - 220.000 MT /mês",
+    source: "CBE Moçambique (cbe.co.mz)",
+    sourceType: "cbe",
+    postedDate: "Há 2 horas",
+    applyUrl: "https://cbe.co.mz/vagas/millennium-bim-fullstack",
+    mapCoords: { x: 138, y: 338, city: "Matola" },
+    matchScore: 96,
+    skills: ["React", "Node.js", "PostgreSQL", "Docker", "Microserviços"],
+    description: "Oportunidade de liderança técnica no maior banco privado de Moçambique. Construção da nova geração de APIs abertas e integrações com o sistema nacional de pagamentos (SIMO).",
+    responsibilities: [
+      "Arquitetar microsserviços tolerantes a falhas e interfaces web modernas.",
+      "Conduzir revisões de código e padrões de arquitetura corporativa."
+    ],
+    requirements: [
+      "5+ anos em engenharia de software com stack JavaScript/TypeScript moderno.",
+      "Experiência com bancos de dados relacionais e mensageria."
+    ],
+    benefits: ["Crédito à habitação com taxa bonificada", "Seguro de saúde premium", "Subsídio de férias"]
+  },
+  {
+    id: "job-mz-4",
+    title: "Oficial de TI & Telecomunicações de Campo",
+    company: "TotalEnergies Moçambique",
+    companyBadge: "TOT",
+    logoColor: "linear-gradient(135deg, #ff1a1a 0%, #0066cc 100%)",
+    niche: "Telecomunicações & Suporte",
+    level: "Pleno",
+    location: "Cabo Delgado (Pemba / Palma)",
+    country: "Moçambique",
+    countryCode: "MZ",
+    flag: "🇲🇿",
+    region: "Pemba",
+    type: "Presencial",
+    salary: "180.000 MT - 240.000 MT /mês",
+    source: "Emprego.co.mz",
+    sourceType: "emprego_mz",
+    postedDate: "Hoje",
+    applyUrl: "https://emprego.co.mz/vagas/totalenergies-oficial-ti",
+    mapCoords: { x: 315, y: 72, city: "Pemba" },
+    matchScore: 91,
+    skills: ["VSAT", "Redes Fibra Óptica", "Suporte de Campo", "Segurança Industrial"],
+    description: "Gestão dos sistemas de comunicação e computação no acampamento de operações de gás natural em Cabo Delgado. Regime rotativo de trabalho (28/28).",
+    responsibilities: [
+      "Manter antenas de satélite VSAT, rádio e links de internet estáveis.",
+      "Prestar assistência imediata às equipas de campo e logística."
+    ],
+    requirements: [
+      "Nacionalidade Moçambicana.",
+      "Inglês fluente para reporte a equipas internacionais.",
+      "Disponibilidade para trabalhar em Pemba / Palma."
+    ],
+    benefits: ["Acomodação e alimentação completas", "Passagens aéreas pagas", "Seguro de vida internacional"]
+  },
+  {
+    id: "job-mz-5",
+    title: "Desenvolvedor Web & Mobile (Inovação e Startups)",
+    company: "Grupo WhatsApp Vagas TI Moçambique",
+    companyBadge: "WPP",
+    logoColor: "linear-gradient(135deg, #25d366 0%, #128c7e 100%)",
+    niche: "Desenvolvimento Frontend",
+    level: "Júnior / Pleno",
+    location: "Maputo (100% Remoto em Moçambique)",
+    country: "Moçambique",
+    countryCode: "MZ",
+    flag: "🇲🇿",
+    region: "Maputo",
+    type: "Remoto",
+    salary: "75.000 MT - 110.000 MT /mês",
+    source: "Grupo WhatsApp Vagas MZ",
+    sourceType: "whatsapp",
+    postedDate: "Há 15 minutos",
+    applyUrl: "mailto:talentos.tech.mz@gmail.com",
+    mapCoords: { x: 147, y: 342, city: "Maputo" },
+    matchScore: 99,
+    skills: ["React", "JavaScript", "CSS/Tailwind", "Git", "Mobile First"],
+    description: "Vaga capturada diretamente do grupo de WhatsApp de Vagas de TI em Moçambique! Empresa de consultoria em rápida expansão precisa de programador para projetos de e-commerce e entregas.",
+    responsibilities: [
+      "Construir telas de checkout e rastreamento de entregas.",
+      "Integrar pagamentos por M-Pesa e e-Mola via API.",
+      "Garantir carregamento ultra-rápido mesmo em 3G/4G."
+    ],
+    requirements: [
+      "Portfólio com pelo menos 2 projetos funcionais.",
+      "Conhecimento de React e consumo de APIs.",
+      "Disponibilidade imediata para início de contrato."
+    ],
+    benefits: ["Trabalho 100% em casa", "Computador portátil fornecido", "Bónus por entrega"]
+  },
+  {
+    id: "job-mz-6",
+    title: "Administrador de Redes & Infraestrutura",
+    company: "Portos e Caminhos de Ferro de Moçambique (CFM)",
+    companyBadge: "CFM",
+    logoColor: "linear-gradient(135deg, #008000 0%, #004d00 100%)",
+    niche: "TI, Redes & Infraestrutura",
+    level: "Pleno",
+    location: "Beira (Sofala)",
+    country: "Moçambique",
+    countryCode: "MZ",
+    flag: "🇲🇿",
+    region: "Beira",
+    type: "Presencial",
+    salary: "115.000 MT - 155.000 MT /mês",
+    source: "MMO Emprego (mmo.co.mz)",
+    sourceType: "mmo",
+    postedDate: "Há 1 dia",
+    applyUrl: "https://mmo.co.mz/emprego/cfm-redes-beira",
+    mapCoords: { x: 230, y: 220, city: "Beira" },
+    matchScore: 90,
+    skills: ["Redes WAN/LAN", "Roteadores Cisco", "Firewall", "Servidores Windows/Linux"],
+    description: "O Porto da Beira procura técnico de infraestrutura para gerir o parque informático de controle de tráfego de carga ferroviária e portuária do corredor central de Moçambique.",
+    responsibilities: [
+      "Assegurar estabilidade dos links de comunicação entre os terminais e a sede.",
+      "Administrar switches, firewalls e controle de acessos da rede."
+    ],
+    requirements: [
+      "3 anos de experiência em gestão de redes corporativas.",
+      "Residência na cidade da Beira ou Dondo."
+    ],
+    benefits: ["Regalias estatutárias dos CFM", "Assistência médica", "13º mês garantido"]
+  },
+  {
+    id: "job-mz-7",
+    title: "Analista de Dados & Business Intelligence",
+    company: "Absa Bank Moçambique",
+    companyBadge: "ABSA",
+    logoColor: "linear-gradient(135deg, #b30000 0%, #800000 100%)",
+    niche: "Data Science & IA",
+    level: "Pleno",
+    location: "Maputo (Av. 25 de Setembro)",
+    country: "Moçambique",
+    countryCode: "MZ",
+    flag: "🇲🇿",
+    region: "Maputo",
+    type: "Híbrido",
+    salary: "135.000 MT - 185.000 MT /mês",
+    source: "LinkedIn Moçambique",
+    sourceType: "linkedin",
+    postedDate: "Hoje",
+    applyUrl: "https://linkedin.com/jobs/absa-mz-bi",
+    mapCoords: { x: 146, y: 346, city: "Maputo" },
+    matchScore: 93,
+    skills: ["SQL", "Power BI", "Python", "ETL", "Modelação de Dados"],
+    description: "Criação de dashboards e modelos preditivos para análise de risco de crédito, comportamento de clientes e rentabilidade de produtos no Absa Moçambique.",
+    responsibilities: [
+      "Desenvolver painéis executivos no Power BI e automações de relatórios em Python.",
+      "Trabalhar com grandes volumes de dados transacionais bancários."
+    ],
+    requirements: [
+      "Domínio avançado de SQL e modelagem de data warehouse.",
+      "Formação superior em Informática, Estatística ou Gestão."
+    ],
+    benefits: ["Seguro de saúde familiar", "Bónus semestral", "Acesso à universidade corporativa Absa"]
+  },
+  {
+    id: "job-mz-8",
+    title: "Engenheiro de Automação & Manutenção TI",
+    company: "Vulcan Moçambique (Mineração)",
+    companyBadge: "VUL",
+    logoColor: "linear-gradient(135deg, #e67300 0%, #994d00 100%)",
+    niche: "TI, Redes & Infraestrutura",
+    level: "Sênior",
+    location: "Tete (Moatize)",
+    country: "Moçambique",
+    countryCode: "MZ",
+    flag: "🇲🇿",
+    region: "Tete",
+    type: "Presencial",
+    salary: "190.000 MT - 260.000 MT /mês",
+    source: "CBE Moçambique (cbe.co.mz)",
+    sourceType: "cbe",
+    postedDate: "Há 3 horas",
+    applyUrl: "https://cbe.co.mz/vagas/vulcan-tete-ti",
+    mapCoords: { x: 190, y: 152, city: "Tete" },
+    matchScore: 91,
+    skills: ["SCADA", "PLCs", "Redes Industriais", "IoT", "Sistemas de Despacho"],
+    description: "Responsável pelos sistemas de tecnologia embarcada e telemetria da frota de mineração na bacia de carvão de Moatize em Tete.",
+    responsibilities: [
+      "Manter sensores e sistemas de rádio-frequência dos caminhões fora-de-estrada.",
+      "Garantir alta disponibilidade das redes industriais da mina."
+    ],
+    requirements: [
+      "Engenharia Eletrônica, Telecomunicações ou Informática.",
+      "Experiência no setor de mineração, portos ou indústria pesada."
+    ],
+    benefits: ["Alojamento em condomínio em Moatize", "Plano de saúde e odontológico", "Viagens anuais pagas"]
+  },
+  {
+    id: "job-mz-9",
+    title: "Gestor de Projetos de TI & Transformação Digital",
+    company: "PwC Moçambique",
+    companyBadge: "PWC",
+    logoColor: "linear-gradient(135deg, #d04a02 0%, #eb8c00 100%)",
+    niche: "Gestão de Projetos & Scrum",
+    level: "Sênior",
+    location: "Maputo (Torres Rani)",
+    country: "Moçambique",
+    countryCode: "MZ",
+    flag: "🇲🇿",
+    region: "Maputo",
+    type: "Híbrido",
+    salary: "160.000 MT - 230.000 MT /mês",
+    source: "CBE Moçambique (cbe.co.mz)",
+    sourceType: "cbe",
+    postedDate: "Há 1 dia",
+    applyUrl: "https://cbe.co.mz/vagas/pwc-gestor-projetos",
+    mapCoords: { x: 148, y: 344, city: "Maputo" },
+    matchScore: 92,
+    skills: ["Scrum", "PMBOK", "Transformação Digital", "ERP", "Gestão de Mudança"],
+    description: "Liderar projetos de implementação de novos sistemas integrados em clientes governamentais e multinacionais em Moçambique.",
+    responsibilities: [
+      "Gerir escopo, cronograma e orçamentos de consultoria de TI.",
+      "Conduzir reuniões com diretores e ministérios parceiros."
+    ],
+    requirements: [
+      "PMP ou Scrum Master certificado.",
+      "Experiência com auditoria ou consultoria estratégica."
+    ],
+    benefits: ["Subsídio internacional", "Seguro de saúde premium", "Carreira acelerada"]
+  },
+
+  // --- OUTRAS VAGAS GLOBAIS / PORTUGAL / ANGOLA / BRASIL ---
+  {
+    id: "job-pt-1",
+    title: "Frontend Developer (React / TypeScript)",
+    company: "Farfetch",
+    companyBadge: "FF",
+    logoColor: "linear-gradient(135deg, #000000 0%, #262626 100%)",
+    niche: "Desenvolvimento Frontend",
+    level: "Pleno / Sênior",
+    location: "Lisboa / Porto (Remoto)",
+    country: "Portugal",
+    countryCode: "PT",
+    flag: "🇵🇹",
+    region: "Lisboa",
+    type: "Remoto",
+    salary: "€ 40.000 - € 55.000 /ano",
+    source: "LinkedIn Jobs",
+    sourceType: "linkedin",
+    postedDate: "Há 2 horas",
+    applyUrl: "https://linkedin.com/jobs/farfetch-frontend",
+    mapCoords: { x: 140, y: 220, city: "Lisboa" },
+    matchScore: 95,
+    skills: ["React", "TypeScript", "Next.js", "Tailwind", "GraphQL"],
+    description: "Plataforma de moda de luxo digital com escritório em Lisboa e atuação 100% remota.",
+    responsibilities: ["Desenvolver componentes de interface de elevada fidelidade."],
+    requirements: ["3+ anos com React e TypeScript."],
+    benefits: ["Seguro de saúde Médis", "Subsídio de alimentação"]
+  },
+  {
+    id: "job-ao-1",
+    title: "Engenheiro de Software Frontend & Mobile",
+    company: "Unitel Tech Hub",
+    companyBadge: "UNI",
+    logoColor: "linear-gradient(135deg, #ff6600 0%, #cc3300 100%)",
+    niche: "Desenvolvimento Frontend",
+    level: "Sênior",
+    location: "Luanda (Híbrido)",
+    country: "Angola",
+    countryCode: "AO",
+    flag: "🇦🇴",
+    region: "Luanda",
+    type: "Híbrido",
+    salary: "Kz 1.800.000 - 2.500.000 /mês",
+    source: "Sagav Direct",
+    sourceType: "sagav",
+    postedDate: "Hoje",
+    applyUrl: "mailto:recrutamento@unitel.ao",
+    mapCoords: { x: 150, y: 180, city: "Luanda" },
+    matchScore: 94,
+    skills: ["React", "TypeScript", "Mobile First", "REST APIs"],
+    description: "Super-app financeiro e serviços de carteira digital em Angola.",
+    responsibilities: ["Arquitetar portais e aplicativos para milhões de utilizadores."],
+    requirements: ["Experiência sólida com ecossistema React."],
+    benefits: ["Seguro de saúde", "Bónus de performance"]
+  },
+  {
+    id: "job-gl-1",
+    title: "Senior Product Designer (Design Systems & Mobile)",
+    company: "Brex",
+    companyBadge: "BRX",
+    logoColor: "linear-gradient(135deg, #f97316 0%, #ef4444 100%)",
+    niche: "UI/UX & Product Design",
+    level: "Sênior",
+    location: "Remoto Global (Contrato USD)",
+    country: "Todo o Mundo (Global)",
+    countryCode: "GL",
+    flag: "🌍",
+    region: "Remoto Global",
+    type: "Remoto",
+    salary: "USD 6.500 - 9.000 /mês",
+    source: "RemoteOK",
+    sourceType: "remote",
+    postedDate: "Hoje",
+    applyUrl: "https://remoteok.com/remote-jobs/brex-product-designer",
+    mapCoords: { x: 200, y: 150, city: "Global" },
+    matchScore: 89,
+    skills: ["Figma", "Design Systems", "iOS Guidelines", "Micro-interactions"],
+    description: "Projetar interfaces líquidas e sistemas corporativos para o mercado global.",
+    responsibilities: ["Construir fluxos e protótipos de ponta a ponta."],
+    requirements: ["Portfólio comprovando projetos mobile sofisticados."],
+    benefits: ["Salário 100% em Dólar", "Férias flexíveis"]
+  }
+];
